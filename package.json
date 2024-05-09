@@ -1,0 +1,23 @@
+{
+  "name": "askandreply",
+  "version": "1.0.0",
+  "description": "A platform to ask things and reply question",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvoCorrea/AskReply-Proj.git"
+  },
+  "author": "Ivo Correa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvoCorrea/AskReply-Proj/issues"
+  },
+  "homepage": "https://github.com/IvoCorrea/AskReply-Proj#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
