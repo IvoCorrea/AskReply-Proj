@@ -128,3 +128,13 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Bootstrap specific
+bootstrap/
+bootstrap/dist/
+bootstrap/node_modules/
+
+# Ignore built files
+*.min.css
+*.min.js
+*.map
