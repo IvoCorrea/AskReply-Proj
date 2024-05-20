@@ -4,6 +4,7 @@
   "description": "A platform to ask things and reply question",
   "main": "index.js",
   "scripts": {
+    "dev": "npx nodemon index.js",
     "test": "node index.js"
   },
   "repository": {

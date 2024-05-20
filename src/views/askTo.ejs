@@ -1,17 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form | AskReply</title>
-
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-</head>
+<%- include('./partials/header.ejs') %>
 <body>
+    <%- include('./partials/navbar.ejs') %>
+
     <div class="container">
-        <h1>container</h1>
-        <img class="profile" src="/img/adm.jpeg" alt="">
+        <div class="card gap">
+            <header class="card-header">
+                <h3 class="gap-text">Ask your question</h3>
+                <hr>
+            </header>
+            <main class="card-body">
+                <form action="" method="post">
+
+                    <label for="titleFormAskInput">Title</label>
+                    <input type="text" name="titleFormAsk" id="titleFormAskInput" placeholder="Title"
+                        class="form-control">
+
+                    <label class="gap-text" for="textFormAsk">Description</label>
+                    <textarea class="form-control" id="textFormAsk" placeholder="Describe your question"></textarea>
+
+                    <button class="btn btn-primary gap">Ask!</button>
+                </form>
+            </main>
+        </div>
     </div>
+
 </body>
-</html>
+<%- include('./partials/footer.ejs') %>

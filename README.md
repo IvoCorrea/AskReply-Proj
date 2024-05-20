@@ -9,3 +9,8 @@ Este projeto é uma plataforma onde você pode lançar perguntas ao site e outra
 - **EJS**: Motor de template para gerar HTML com JavaScript.
 - **Bootstrap**: Framework CSS para design responsivo e moderno.
 - **MySQL**: Sistema de gerenciamento de banco de dados relacional.
+
+## Atualizações
+
+- Foi criado um formulario para enviar perguntas na rota '/ask'
+- Agora os arquivos Ejs utilizam <%- include() %> para reutilização de codigo HTML. 

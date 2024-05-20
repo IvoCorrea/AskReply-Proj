@@ -1,0 +1,21 @@
+body {
+    background-color: #eceff1;
+}
+
+.navbar {
+    background-color: #0078f8;
+}
+
+.navbar-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.gap {
+    margin-top: 3vh;
+}
+
+.gap-text {
+    margin-top: 2vh;
+}
