@@ -12,5 +12,5 @@ Este projeto é uma plataforma onde você pode lançar perguntas ao site e outra
 
 ## Atualizações
 
-- Foi criado um formulario para enviar perguntas na rota '/ask'
-- Agora os arquivos Ejs utilizam <%- include() %> para reutilização de codigo HTML. 
+- Agora os arquivos Ejs utilizam <%- include() %> para reutilização de codigo HTML.
+- A rota POST: /ask/postform; foi criada para adicionar o formulario ao banco de dados.
