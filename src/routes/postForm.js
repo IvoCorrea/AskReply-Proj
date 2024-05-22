@@ -2,17 +2,27 @@ const body = require('body-parser')
 const express = require('express')
 const router = express.Router()
 
-router.post('/', (req, res) => {
+const QuestionTable = require('../../database/models/Question')
+
+router.post('/', async (req, res) => {
     const question = {
         questionTitle: req.body.titleFormAsk,
         questionDescription: req.body.descriptionFormAsk
     }
-    console.log(question)
-    
-    res.status(200).render('postForm', {
-        questionTitle: question.questionTitle,
-        questionDescription: question.questionDescription
-    })
+
+    try {
+        await QuestionTable.create({
+            title: question.questionTitle,
+            description: question.questionDescription
+        })
+        res.status(201).redirect('/')
+        
+    } catch (error) {
+        res.status(500).json({
+            message: 'Internal server error'
+        })
+        console.error(error)
+    }
 })
 
 module.exports = router

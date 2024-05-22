@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const connection = require('./sequelize')
+const connection = require('../sequelize')
 
 const Question = connection.define('question', {
     title: {
@@ -22,3 +22,4 @@ async function createTable(){
 }
 
 createTable()
+module.exports = Question

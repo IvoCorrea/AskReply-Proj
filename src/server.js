@@ -4,7 +4,7 @@ const path = require('path')
 const app = express()
 
 const database = require('../database/sequelize')
-const questionModel = require('../database/Question')
+const questionModel = require('../database/models/Question')
 
 async function main() {
     try {
