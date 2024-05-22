@@ -14,3 +14,4 @@ Este projeto é uma plataforma onde você pode lançar perguntas ao site e outra
 
 - Agora os arquivos Ejs utilizam <%- include() %> para reutilização de codigo HTML.
 - A rota POST: /ask/postform; foi criada para adicionar o formulario ao banco de dados.
+- ORM Sequelize introduzido, assim como os drivers para o Mysql.
