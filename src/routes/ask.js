@@ -4,7 +4,11 @@ const router = express.Router()
 
 const QuestionTable = require('../../database/models/Question')
 
-router.post('/', async (req, res) => {
+router.get('/', async (req, res) => {
+    res.render('askTo')
+})
+
+router.post('/postform', async (req, res) => {
     const question = {
         questionTitle: req.body.titleFormAsk,
         questionDescription: req.body.descriptionFormAsk
@@ -15,7 +19,10 @@ router.post('/', async (req, res) => {
             title: question.questionTitle,
             description: question.questionDescription
         })
-        res.status(201).redirect('/')
+        res.status(201).render('askSuccess', ({
+            questionTitle: question.questionTitle,
+            questionDescription: question.questionDescription,
+        }))
         
     } catch (error) {
         res.status(500).json({

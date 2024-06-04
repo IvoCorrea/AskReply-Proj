@@ -1,0 +1,21 @@
+<%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <div class="container">
+        <div class="card gap">
+            <div class="card-body">
+                <h2 class="gap">Your question has been added</h1>
+            </div>
+                <div class="card-footer">
+                    <p><strong>Title:</strong> <%- questionTitle %></p>
+                    <p><strong>Description:</strong> <%- questionDescription %></p>
+                </div>
+        </div>
+        
+            <a href="/" class="btn btn-primary gap-text">Home</a>
+    </div>
+
+
+</body>
+<%- include('./partials/footer.ejs') %>
