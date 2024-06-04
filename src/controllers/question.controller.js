@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+
 const QuestionTable = require('../../database/models/Question')
 
 router.get('/:id', async (req, res) => {

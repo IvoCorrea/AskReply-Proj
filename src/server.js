@@ -23,8 +23,8 @@ app.use(bodyParser.json())
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-app.use('/', require('./routes/home'))
-app.use('/ask', require('./routes/ask'))
-app.use('/question', require('./routes/question'))
+app.use('/', require('./controllers/home.controller'))
+app.use('/ask', require('./controllers/ask.controller'))
+app.use('/question', require('./controllers/question.controller'))
 
 module.exports = app

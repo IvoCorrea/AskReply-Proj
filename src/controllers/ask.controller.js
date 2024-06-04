@@ -2,13 +2,14 @@ const body = require('body-parser')
 const express = require('express')
 const router = express.Router()
 
+const { questionExist } = require('../middlewares/questionExist')
 const QuestionTable = require('../../database/models/Question')
 
 router.get('/', async (req, res) => {
     res.render('askTo')
 })
 
-router.post('/postform', async (req, res) => {
+router.post('/postform', questionExist, async (req, res) => {
     const question = {
         questionTitle: req.body.titleFormAsk,
         questionDescription: req.body.descriptionFormAsk
