@@ -1,7 +1,10 @@
 const express = require('express')
+const body = require('body-parser')
 const router = express.Router()
 
 const QuestionTable = require('../../database/models/Question')
+const ReplyTable = require('../../database/models/Reply')
+const { replyExist } = require('../middlewares/replyExist')
 
 router.get('/:id', async (req, res) => {
     const Id = req.params.id
@@ -19,6 +22,25 @@ router.get('/:id', async (req, res) => {
     } catch (error) {
         console.log(error)
         res.status(400).redirect('/')
+    }
+})
+
+router.post('/sendreply', replyExist , async (req, res) => {
+    const { questionIdForm, textFormReply } = req.body
+
+    try {
+        await ReplyTable.create({
+            body: textFormReply,
+            questionId: questionIdForm
+        })
+
+        res.status(201).redirect('/')
+
+    } catch (error) {
+        res.status(500).json({
+            message: 'Internal server error'
+        })
+        console.error(error)
     }
 })
 

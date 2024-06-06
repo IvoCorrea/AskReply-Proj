@@ -9,20 +9,17 @@ router.get('/', async (req, res) => {
     res.render('askTo')
 })
 
-router.post('/postform', questionExist, async (req, res) => {
-    const question = {
-        questionTitle: req.body.titleFormAsk,
-        questionDescription: req.body.descriptionFormAsk
-    }
+router.post('/sendquestion', questionExist, async (req, res) => {
+    const { titleFormAsk, descriptionFormAsk } = req.body
 
     try {
         await QuestionTable.create({
-            title: question.questionTitle,
-            description: question.questionDescription
+            title: titleFormAsk,
+            description: descriptionFormAsk
         })
         res.status(201).render('askSuccess', ({
-            questionTitle: question.questionTitle,
-            questionDescription: question.questionDescription,
+            questionTitle: titleFormAsk,
+            questionDescription: descriptionFormAsk,
         }))
         
     } catch (error) {

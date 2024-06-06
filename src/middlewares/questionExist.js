@@ -17,9 +17,9 @@ async function questionExist(req, res, next) {
             return res.status(409).json({
                 error: "A question with the same title and description already exists"
             })
-        }
-
+        } 
         next()
+        
     } catch (error) {     
         return res.status(500).send('database error')
     }

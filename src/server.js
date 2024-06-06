@@ -5,6 +5,7 @@ const app = express()
 
 const database = require('../database/sequelize')
 const questionModel = require('../database/models/Question')
+const replyModel = require('../database/models/Reply')
 
 async function databaseConnection() {
     try {

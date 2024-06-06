@@ -4,10 +4,28 @@
         <%- include('./partials/navbar.ejs') %>
 
             <div class="container">
+
                 <h1 class="gap"> <%- question.title %> </h1>
                 <hr>
-                <p><strong><%- question.description %></strong> </p>
+                <p><strong><%- question.description %></strong></p><br>
+
+
+                <div class="card gap">
+                    <form action="/question/sendreply" method="post" class="">
+                        <div class="card-body">
+                            <h3>Create a Reply</h3>
+                        </div>
+                        <div class="card-footer">
+                            <label for="">Answer</label>
+                            <textarea placeholder="Write a reply" class="form-control" name="textFormReply" id="textFormReply"></textarea>
+
+                            <input type="hidden" name="questionIdForm" id="questionIdForm" value="<%- question.id  %>">
+
+                            <button class="btn btn-primary gap-text">Send</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
     </body>
-<%- include('./partials/footer.ejs') %>
+    <%- include('./partials/footer.ejs') %>
