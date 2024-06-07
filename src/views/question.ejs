@@ -25,6 +25,20 @@
                         </div>
                     </form>
                 </div>
+
+                <hr>
+
+                <div>
+                    <h3>Replies</h3>
+                    <hr>
+                    <% replies.forEach(reply => { %>
+                        <div class="card gap">
+                            <div class="card-body">
+                                <p> <%- reply.body %> </p>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
             </div>
 
     </body>
